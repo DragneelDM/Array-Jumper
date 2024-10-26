@@ -1,6 +1,6 @@
 #pragma once
-#include "../../header/Player/PlayerView.h";
 #include "../../header/Global/Config.h";
+#include "../../header/Player/PlayerView.h";
 
 using namespace Global;
 using namespace UI::UIElement;
@@ -9,15 +9,15 @@ namespace Player
 {
 	PlayerView::PlayerView(PlayerController* controller)
 	{
+		player_controller = controller;
 		game_window = nullptr;
-		player_image = new ImageView();
 	}
 
 	PlayerView::PlayerView() {};
 
 	void PlayerView::initialize()
 	{
-		game_window = Global::ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
+		game_window = ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
 		loadPlayer();
 	}
 
@@ -34,7 +34,12 @@ namespace Player
 
 	void PlayerView::render()
 	{
-		drawPlayer();
+		switch (player_controller->getPlayerState())
+		{
+		case PlayerState::ALIVE:
+			drawPlayer();
+			break;
+		}
 	}
 
 	void PlayerView::drawPlayer()

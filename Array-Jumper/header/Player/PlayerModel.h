@@ -14,10 +14,11 @@ namespace Player
 		int current_position;
 
 	public:
-		PlayerState GetPlayerState();
-		void SetPlayerState(PlayerState newState);
+		PlayerState getPlayerState();
+		void setPlayerState(PlayerState newState);
 
-		int GetCurrentPosition();
-		void SetCurrentPosition(int newPosition);
+		void initialize();
+		int getCurrentPosition();
+		void setCurrentPosition(int newPosition);
 	};
 }

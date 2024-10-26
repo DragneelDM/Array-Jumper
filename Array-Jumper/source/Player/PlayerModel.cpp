@@ -2,22 +2,22 @@
 #include "../../header/Player/PlayerModel.h";
 namespace Player
 {
-	PlayerState PlayerModel::GetPlayerState()
+	PlayerState PlayerModel::getPlayerState()
 	{
 		return player_state;
 	}
 
-	void PlayerModel::SetPlayerState(PlayerState newState)
+	void PlayerModel::setPlayerState(PlayerState newState)
 	{
 		player_state = newState;
 	}
 
-	int PlayerModel::GetCurrentPosition()
+	int PlayerModel::getCurrentPosition()
 	{
 		return current_position;
 	}
 
-	void PlayerModel::SetCurrentPosition(int newPosition)
+	void PlayerModel::setCurrentPosition(int newPosition)
 	{
 		current_position = newPosition;
 	}

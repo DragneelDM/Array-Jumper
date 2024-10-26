@@ -1,4 +1,7 @@
 #pragma once
+#include "../../header/Global/ServiceLocator.h"
+#include "../../header/Player/PlayerController.h"
+#include "../../header/Player/PlayerModel.h"
 #include "../../header/UI/UIElement/ImageView.h"
 
 namespace Player
@@ -9,6 +12,7 @@ namespace Player
 	private:
 		sf::RenderWindow* game_window;
 		UI::UIElement::ImageView* player_image;
+		PlayerController* player_controller;
 
 		float player_height;
 		float player_width;
