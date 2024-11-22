@@ -1,8 +1,6 @@
 #pragma once
-#include "../../header/Global/ServiceLocator.h"
-#include "../../header/Player/PlayerController.h"
-#include "../../header/Player/PlayerModel.h"
 #include "../../header/UI/UIElement/ImageView.h"
+#include "../../header/Player/PlayerController.h"
 
 namespace Player
 {
@@ -12,8 +10,8 @@ namespace Player
 	private:
 		sf::RenderWindow* game_window;
 		UI::UIElement::ImageView* player_image;
-		PlayerController* player_controller;
 
+		PlayerController* player_controller;
 		float player_height;
 		float player_width;
 
@@ -22,11 +20,10 @@ namespace Player
 		void loadPlayer();
 		void calculatePlayerDimensions();
 		void updatePlayerPosition();
-		sf::Vector2f calulcatePlayerPosition();
+		sf::Vector2f calculcatePlayerPosition();
 
 	public:
 		PlayerView(PlayerController* controller);
-		PlayerView();
 		~PlayerView();
 
 		void initialize();

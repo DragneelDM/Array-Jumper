@@ -1,5 +1,5 @@
-#pragma once
-#include "../../header/Player/PlayerModel.h";
+#include "../../header/Player/PlayerModel.h"
+
 namespace Player
 {
 	PlayerState PlayerModel::getPlayerState()
@@ -7,9 +7,9 @@ namespace Player
 		return player_state;
 	}
 
-	void PlayerModel::setPlayerState(PlayerState newState)
+	void PlayerModel::setPlayerState(PlayerState new_player_state)
 	{
-		player_state = newState;
+		player_state = new_player_state;
 	}
 
 	int PlayerModel::getCurrentPosition()
@@ -17,8 +17,12 @@ namespace Player
 		return current_position;
 	}
 
-	void PlayerModel::setCurrentPosition(int newPosition)
+	void PlayerModel::setCurrentPosition(int new_position)
 	{
-		current_position = newPosition;
+		current_position = new_position;
+	}
+	void PlayerModel::initialize()
+	{
+
 	}
 }

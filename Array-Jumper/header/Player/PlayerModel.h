@@ -1,4 +1,5 @@
 #pragma once
+
 namespace Player
 {
 	enum class PlayerState
@@ -10,15 +11,17 @@ namespace Player
 	class PlayerModel
 	{
 	private:
+
 		PlayerState player_state;
 		int current_position;
 
 	public:
 		PlayerState getPlayerState();
-		void setPlayerState(PlayerState newState);
+		void setPlayerState(PlayerState new_player_state);
+
+		int getCurrentPosition();
+		void setCurrentPosition(int new_position);
 
 		void initialize();
-		int getCurrentPosition();
-		void setCurrentPosition(int newPosition);
 	};
 }
