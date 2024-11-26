@@ -3,9 +3,16 @@
 
 namespace Player
 {
+
+	#pragma region Constructor Destructor
+
 	PlayerService::PlayerService() { player_controller = new PlayerController(); }
 
 	PlayerService::~PlayerService() { destroy(); }
+
+	#pragma endregion
+
+	#pragma region Lifecycle Events
 
 	void PlayerService::initialize()
 	{
@@ -21,6 +28,8 @@ namespace Player
 	{
 		player_controller->render();
 	}
+
+	#pragma endregion
 
 	void PlayerService::destroy() { delete(player_controller); }
 }

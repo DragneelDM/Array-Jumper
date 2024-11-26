@@ -44,6 +44,8 @@ namespace Player
 		return sf::Vector2f();
 	}
 
+	#pragma region Constructor Destructor
+
 	PlayerView::PlayerView(PlayerController* controller)
 	{
 		player_controller = controller;
@@ -56,6 +58,10 @@ namespace Player
 	{
 
 	}
+
+	#pragma endregion
+
+	#pragma region Lifecycle Events
 
 	void PlayerView::initialize()
 	{
@@ -81,4 +87,6 @@ namespace Player
 			break;
 		}
 	}
+
+	#pragma endregion
 }

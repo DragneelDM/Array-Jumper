@@ -4,6 +4,24 @@
 
 namespace Player
 {
+	PlayerState PlayerController::getPlayerState()
+	{
+		return player_model->getPlayerState();
+	}
+
+	void PlayerController::setPlayerState(PlayerState new_player_state)
+	{
+		player_model->setPlayerState(new_player_state);
+	}
+
+	void PlayerController::destroy()
+	{
+		delete(player_model);
+		delete(player_view);
+	}
+
+	#pragma region Constructor Destructor
+
 	PlayerController::PlayerController()
 	{
 		player_model = new PlayerModel();
@@ -11,6 +29,10 @@ namespace Player
 	}
 
 	PlayerController::~PlayerController() { destroy(); }
+
+	#pragma endregion
+
+	#pragma region Lifecycle Events
 
 	void PlayerController::initialize()
 	{
@@ -28,19 +50,5 @@ namespace Player
 		player_view->render();
 	}
 
-	PlayerState PlayerController::getPlayerState()
-	{
-		return player_model->getPlayerState();
-	}
-
-	void PlayerController::setPlayerState(PlayerState new_player_state)
-	{
-		player_model->setPlayerState(new_player_state);
-	}
-
-	void PlayerController::destroy()
-	{
-		delete(player_model);
-		delete(player_view);
-	}
+	#pragma endregion
 }

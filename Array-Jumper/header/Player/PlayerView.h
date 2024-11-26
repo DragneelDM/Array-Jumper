@@ -1,6 +1,6 @@
 #pragma once
-#include "../../header/UI/UIElement/ImageView.h"
-#include "../../header/Player/PlayerController.h"
+#include "../UI/UIElement/ImageView.h"
+#include "../Player/PlayerController.h"
 
 namespace Player
 {
